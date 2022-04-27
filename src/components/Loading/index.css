@@ -1,0 +1,98 @@
+.loading-wrap {
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spin-dot {
+  position: relative;
+  left: -60px;
+}
+
+.spin-dot-item {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #1890ff;
+  border-radius: 100%;
+  opacity: 0;
+}
+.spin-dot-item:first-child {
+  left: 0;
+  animation: SpinMove1 3s infinite ease-in-out;
+}
+
+.spin-dot-item:nth-child(2) {
+  left: 12px;
+  animation: SpinMove2 3s infinite ease-in-out;
+}
+
+.spin-dot-item:nth-child(3) {
+  left: 24px;
+  animation: SpinMove3 3s infinite ease-in-out;
+}
+
+.spin-dot-item:nth-child(4) {
+  left: 34px;
+  animation: SpinMove4 3s infinite ease-in-out;
+}
+
+@keyframes SpinMove1 {
+  63% {
+    left: 66px;
+    opacity: 1;
+  }
+  96% {
+    left: 66px;
+    opacity: 1;
+  }
+  100% {
+    left: 134px;
+    opacity: 0;
+  }
+}
+@keyframes SpinMove2 {
+  53% {
+    left: 78px;
+    opacity: 1;
+  }
+  86% {
+    left: 78px;
+    opacity: 1;
+  }
+  100% {
+    left: 146px;
+    opacity: 0;
+  }
+}
+@keyframes SpinMove3 {
+  43% {
+    left: 90px;
+    opacity: 1;
+  }
+  76% {
+    left: 90px;
+    opacity: 1;
+  }
+  100% {
+    left: 158px;
+    opacity: 0;
+  }
+}
+@keyframes SpinMove4 {
+
+  33% {
+    left: 102px;
+    opacity: 1;
+  }
+  66% {
+    left: 102px;
+    opacity: 1;
+  }
+  100% {
+    left: 170px;
+    opacity: 0;
+  }
+}

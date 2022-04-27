@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#1890ff" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="keywords"
+    content="互联网，博客，代码，提升技术" />
+  <meta name="description" content="一个技术博客分享网站" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <title>CoderUp</title>
+  <link rel="icon" href="<%= context.config.publicPath +'favicon.ico'%>" type="image/x-icon" />
+</head>
+
+<body>
+  <div id="root">
+    <style>
+      html,
+      body,
+      #root {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #root {
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+
+      .noscript-container {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-top: 90px;
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+          Geneva, Verdana, sans-serif;
+      }
+
+      .noscript-enableJS {
+        padding-right: 3px;
+        padding-left: 3px;
+      }
+
+      .loading-wrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .spin-dot {
+        position: relative;
+      }
+
+      .spin-dot-item {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: #1890ff;
+        border-radius: 100%;
+        opacity: 0;
+      }
+
+      .spin-dot-item:first-child {
+        left: 0;
+        animation: SpinMove1 3s infinite ease-in-out;
+      }
+
+      .spin-dot-item:nth-child(2) {
+        left: 12px;
+        animation: SpinMove2 3s infinite ease-in-out;
+      }
+
+      .spin-dot-item:nth-child(3) {
+        left: 24px;
+        animation: SpinMove3 3s infinite ease-in-out;
+      }
+
+      .spin-dot-item:nth-child(4) {
+        left: 34px;
+        animation: SpinMove4 3s infinite ease-in-out;
+      }
+
+      @keyframes SpinMove1 {
+        63% {
+          left: 66px;
+          opacity: 1;
+        }
+
+        96% {
+          left: 66px;
+          opacity: 1;
+        }
+
+        100% {
+          left: 134px;
+          opacity: 0;
+        }
+      }
+
+      @keyframes SpinMove2 {
+        53% {
+          left: 78px;
+          opacity: 1;
+        }
+
+        86% {
+          left: 78px;
+          opacity: 1;
+        }
+
+        100% {
+          left: 146px;
+          opacity: 0;
+        }
+      }
+
+      @keyframes SpinMove3 {
+        43% {
+          left: 90px;
+          opacity: 1;
+        }
+
+        76% {
+          left: 90px;
+          opacity: 1;
+        }
+
+        100% {
+          left: 158px;
+          opacity: 0;
+        }
+      }
+
+      @keyframes SpinMove4 {
+
+        33% {
+          left: 102px;
+          opacity: 1;
+        }
+
+        66% {
+          left: 102px;
+          opacity: 1;
+        }
+
+        100% {
+          left: 170px;
+          opacity: 0;
+        }
+      }
+
+    </style>
+    <div style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          min-height: 420px;
+        ">
+      <div className="loading-wrap">
+        <div className="spin-dot">
+          <i className="spin-dot-item"></i>
+          <i className="spin-dot-item"></i>
+          <i className="spin-dot-item"></i>
+          <i className="spin-dot-item"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
